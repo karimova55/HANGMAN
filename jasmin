@@ -1,3 +1,22 @@
+import pygame
+import random
+import os
+print(os.getcwd())
+
+pygame.init()
+winHeight = 480
+winWidth = 700
+win = pygame.display.set_mode((winWidth, winHeight))
+
+# Colors
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+LIGHT_BLUE = (102, 255, 255)
+
+
 def reset():
     global limbs
     global guessed
@@ -5,3 +24,5 @@ def reset():
     global word
     for i in range(len(buttons)):
         buttons[i][4] = True
+
+
