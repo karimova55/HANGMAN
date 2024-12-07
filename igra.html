@@ -1,0 +1,59 @@
+import pygame
+import random
+
+# Pygame-ni ishga tushirish
+pygame.init()
+
+# O'yin oynasining o'lchamlarini belgilash
+winHeight = 480
+winWidth = 700
+win = pygame.display.set_mode((winWidth, winHeight))
+
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+LIGHT_BLUE = (102, 255, 255)
+<<<<<<< HEAD
+kodni birlashtiramiz
+=======
+umumiy
+
+# Shriftlarni belgilash
+btn_font = pygame.font.SysFont("arial", 20)
+
+guess_font = pygame.font.SysFont("monospace", 24)
+lost_font = pygame.font.SysFont('arial', 45)
+ketma ket
+
+<<<<<<< HEAD
+>>>>>>> ranglari
+=======
+# Global o'zgaruvchilar
+word = ''
+buttons = []
+guessed = []
+limbs = 0
+hangmanPics = [
+    pygame.image.load('hangman0.png'),
+    pygame.image.load('hangman1.png'),
+    pygame.image.load('hangman2.png'),
+    pygame.image.load('hangman3.png'),
+    pygame.image.load('hangman4.png'),
+    pygame.image.load('hangman5.png'),
+    pygame.image.load('hangman6.png')
+]
+def redraw_game_window():
+global guessed
+    global limbs
+    win.fill(GREEN)  
+    for button in buttons:
+        if button[4]:  # Agar tugma ko'rsatilayotgan bo'lsa
+            pygame.draw.circle(win, BLACK, (button[1], button[2]), button[3])
+            pygame.draw.circle(win, button[0], (button[1], button[2]), button[3] - 2)
+            label = btn_font.render(chr(button[5]), 1, BLACK)
+            win.blit(label, (button[1] - label.get_width() / 2, button[2] - label.get_height() / 2))
+>>>>>>> tugmalar
+qo'shamiz
